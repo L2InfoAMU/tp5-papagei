@@ -27,7 +27,7 @@ public class PaletteRasterImage implements Image {
         }// enf for column
     }
 
-    public PaletteRasterImage(Color[][] pixels){
+    public PaletteRasterImage(Color[][] pixels){ //TODO
 
 
     }
@@ -47,6 +47,36 @@ public class PaletteRasterImage implements Image {
     @Override
     public int getHeight() {
         return this.height;
+    }
+    /************** SETTERS *************************************************/
+    public void setPixelColor(Color color, int x, int y){
+        if (palette.indexOf(color) == -1){ // if color not in the palette
+            palette.add(color);//add it in our palette.
+        }
+        int index = palette.indexOf(color);
+        indexesOfColors[x][y] = index;
+
+    }
+
+    public void setPixelsColor(Color[][] pixels){
+
+        for(int column=0; column < width ; column++){
+            for (int row=0; row < height; row++){
+                Color new_color = pixels[column][row];
+                setPixelColor(new_color, column, row);// set the new byte in indexesOfColors[x][y]
+            } // end for row
+        }// enf for column
+
+    }
+
+    protected void setWidth(int width){
+        this.width = width;
+
+    }
+
+    protected void setHeight(int height){
+        this.height = height;
+
     }
 
 
