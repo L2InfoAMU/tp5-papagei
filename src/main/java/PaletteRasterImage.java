@@ -18,17 +18,14 @@ public class PaletteRasterImage implements Image {
     public PaletteRasterImage(Color color, int width, int height){
         this.height = height;
         this.width = width;
-        palette.set(0, color);
-        // all pixel have to have this index.
         for(int column=0; column < width ; column++){
             for (int row=0; row < height; row++){
-                indexesOfColors[column][row] = 0;
-            } // end for row
-        }// enf for column
+                setPixelColor(color, column, row);
+            } // end for => row
+        }// enf for => column
     }
 
     public PaletteRasterImage(Color[][] pixels){ //TODO
-
 
     }
     /************** GETTERS *************************************************/
@@ -40,14 +37,10 @@ public class PaletteRasterImage implements Image {
     }
 
     @Override
-    public int getWidth() {
-        return this.width;
-    }
+    public int getWidth() { return this.width; }
 
     @Override
-    public int getHeight() {
-        return this.height;
-    }
+    public int getHeight() { return this.height; }
     /************** SETTERS *************************************************/
     public void setPixelColor(Color color, int x, int y){
         if (palette.indexOf(color) == -1){ // if color not in the palette
@@ -55,7 +48,6 @@ public class PaletteRasterImage implements Image {
         }
         int index = palette.indexOf(color);
         indexesOfColors[x][y] = index;
-
     }
 
     public void setPixelsColor(Color[][] pixels){
@@ -66,22 +58,16 @@ public class PaletteRasterImage implements Image {
                 setPixelColor(new_color, column, row);// set the new byte in indexesOfColors[x][y]
             } // end for row
         }// enf for column
-
     }
 
-    protected void setWidth(int width){
-        this.width = width;
+    protected void setWidth(int width){ this.width = width; }
 
-    }
-
-    protected void setHeight(int height){
-        this.height = height;
-
-    }
-
+    protected void setHeight(int height){ this.height = height; }
 
     /************** METHODS *************************************************/
+    public void createRepresentation(){
 
+    }
 
 
 
