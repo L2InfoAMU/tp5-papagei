@@ -1,3 +1,5 @@
+package exception;
+
 public class NotSupportedException extends  RuntimeException {
     String message;
 
