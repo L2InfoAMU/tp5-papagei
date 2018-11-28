@@ -1,3 +1,5 @@
+package raster;
+
 import image.*;
 import javafx.scene.paint.Color;
 

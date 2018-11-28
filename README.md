@@ -4,8 +4,8 @@
 
 On va considérer quatre manières de représenter une image en couleur et donc quatre classes d'images :
 
-- `BruteRasterImage` 
-- `PaletteRasterImage` 
+- `BruteRasterImage`
+- `PaletteRasterImage`
 - `SparseRasterImage` 
 - `VectorImage` 
 
