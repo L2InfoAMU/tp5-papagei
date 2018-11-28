@@ -6,6 +6,8 @@ import javafx.scene.paint.Color;
 
 import java.util.List;
 
+import static util.Matrices.*;
+
 public class PaletteRasterImage implements Image {
 
     private int width;
@@ -26,6 +28,14 @@ public class PaletteRasterImage implements Image {
     }
 
     public PaletteRasterImage(Color[][] pixels){ //TODO
+        //Check for possible error cases
+        requiresNonNull(pixels);
+        requiresNonZeroDimensions(pixels);
+        requiresRectangularMatrix(pixels);
+        //set les attributs de this.
+        this.width = getColumnCount(pixels);
+        this.height = getRowCount(pixels);
+        setPixelsColor(pixels);
 
     }
     /************** GETTERS *************************************************/
