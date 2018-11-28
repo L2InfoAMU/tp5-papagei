@@ -1,4 +1,5 @@
 // REMEMBER  x => columns AND y => ROWS
+//test tp a domicile
 import image.*;
 import javafx.scene.paint.Color;
 
