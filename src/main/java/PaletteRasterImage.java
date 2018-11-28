@@ -1,7 +1,5 @@
-
 // REMEMBER  x => columns AND y => ROWS
-
-import image.Image;
+import image.*;
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
@@ -22,14 +20,10 @@ public class PaletteRasterImage implements Image {
         this.height = height;
         this.width = width;
         createRepresentation();
-        for(int column=0; column < width ; column++){
-            for (int row=0; row < height; row++){
-                setPixelColor(color, column, row);
-            } // end for => row
-        }// enf for => column
+        setPixelsColor(color);
     }
 
-    public PaletteRasterImage(Color[][] pixels){ //TODO
+    public PaletteRasterImage(Color[][] pixels){
         //Check for possible error cases
         requiresNonNull(pixels);
         requiresNonZeroDimensions(pixels);
@@ -39,7 +33,6 @@ public class PaletteRasterImage implements Image {
         this.height = getRowCount(pixels);
         createRepresentation();
         setPixelsColor(pixels);
-
     }
     /************** GETTERS *************************************************/
     @Override
@@ -72,6 +65,17 @@ public class PaletteRasterImage implements Image {
             } // end for row
         }// enf for column
     }
+    private void setPixelsColor(Color color){
+        if (palette.indexOf(color) == -1){ // if color not in the palette
+            palette.add(color);//add it in our palette.
+        }
+        int index = palette.indexOf(color);
+        for(int column=0; column < width ; column++){
+            for (int row=0; row < height; row++){
+                indexesOfColors[column][row] = index;
+            } // end for => row
+        }// enf for => column
+    }
 
     protected void setWidth(int width){ this.width = width; }
 
@@ -82,7 +86,5 @@ public class PaletteRasterImage implements Image {
         this.palette = new ArrayList<>();
         indexesOfColors = new int[width][height];
     }
-
-
 
 }
