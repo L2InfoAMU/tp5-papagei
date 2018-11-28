@@ -49,6 +49,12 @@ public class PaletteRasterImage implements Image {
     @Override
     public int getHeight() { return this.height; }
     /************** SETTERS *************************************************/
+    /**
+     * change the color of 1 pixel in : (x,y) position.
+     * @param color
+     * @param x
+     * @param y
+     */
     public void setPixelColor(Color color, int x, int y){
         if (palette.indexOf(color) == -1){ // if color not in the palette
             palette.add(color);//add it in our palette.
@@ -57,8 +63,11 @@ public class PaletteRasterImage implements Image {
         indexesOfColors[x][y] = index;
     }
 
+    /**
+     * Set all the pixel's image to be as the new matrice(pixels) is coded
+     * @param pixels
+     */
     public void setPixelsColor(Color[][] pixels){
-
         for(int column=0; column < width ; column++){
             for (int row=0; row < height; row++){
                 Color new_color = pixels[column][row];
@@ -66,6 +75,11 @@ public class PaletteRasterImage implements Image {
             } // end for row
         }// enf for column
     }
+
+    /**
+     * Set all pixel to be of the same color
+     * @param color
+     */
     private void setPixelsColor(Color color){
         if (palette.indexOf(color) == -1){ // if color not in the palette
             palette.add(color);//add it in our palette.
