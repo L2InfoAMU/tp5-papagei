@@ -4,7 +4,6 @@ import image.*;
 import javafx.scene.paint.Color;
 
 import static util.Matrices.*;
-import static util.Matrices.getRowCount;
 
 public class BruteRasterImage implements Image {
     public Color[][] pixels;
@@ -24,8 +23,8 @@ public class BruteRasterImage implements Image {
         requiresNonZeroDimensions(colors);
         requiresRectangularMatrix(colors);
         //set les attributs de this.
-        this.width = getColumnCount(colors);
-        this.height = getRowCount(colors);
+        this.width = getRowCount(colors);
+        this.height = getColumnCount(colors);
         createRepresentation();
         setPixelsColor(colors);
 
