@@ -12,3 +12,4 @@ On va considérer quatre manières de représenter une image en couleur et donc 
 ## Membres du projet
 
 - ABDEL WAHAB Ismail.
+- TOKOGLU Adrien.
