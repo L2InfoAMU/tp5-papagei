@@ -1,6 +1,6 @@
 package palette;// REMEMBER  x => columns AND y => ROWS
-//test tp a domicile
 import image.*;
+import raster.*;
 import javafx.scene.paint.Color;
 
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.List;
 
 import static util.Matrices.*;
 
-public class PaletteRasterImage implements Image {
+public class PaletteRasterImage extends RasterImage {
 
     private int width;
     private int height;

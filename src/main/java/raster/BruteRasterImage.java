@@ -5,7 +5,7 @@ import javafx.scene.paint.Color;
 
 import static util.Matrices.*;
 
-public class BruteRasterImage implements Image {
+public class BruteRasterImage extends RasterImage  {
     public Color[][] pixels;
     public int width;
     public int height;
