@@ -1,6 +1,7 @@
 package image;
 
 import raster.*; // to use the raster files
+import palette.*;
 import exception.NotSupportedException; // manage exception
 import javafx.scene.paint.Color;
 
@@ -22,6 +23,8 @@ public class RasterUniformImageFactory implements ImageFactory {
         switch (rasterImageType){
             case BRUTE:
                 return new BruteRasterImage(color, width, height);
+            case PALETTE:
+                return new PaletteRasterImage(color, width, height);
             default:
                 throw new NotSupportedException(rasterImageType + " is not supported");
         }

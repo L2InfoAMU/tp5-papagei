@@ -30,8 +30,8 @@ public class PaletteRasterImage implements Image {
         requiresNonZeroDimensions(pixels);
         requiresRectangularMatrix(pixels);
         //set les attributs de this.
-        this.width = getColumnCount(pixels);
-        this.height = getRowCount(pixels);
+        this.width = getRowCount(pixels);
+        this.height = getColumnCount(pixels);
         createRepresentation();
         setPixelsColor(pixels);
     }
