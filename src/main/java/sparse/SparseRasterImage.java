@@ -4,9 +4,10 @@ import image.Point;
 import javafx.scene.paint.Color;
 import raster.RasterImage;
 
-import java.util.Map;
+import java.util.HashMap;
 
 public class SparseRasterImage extends RasterImage{
+    private HashMap<Point,Color> dictionary ;
 
     /******************** CONSTRUCTORS *******************************/
     public SparseRasterImage(Color color, int width, int height) {
@@ -18,24 +19,22 @@ public class SparseRasterImage extends RasterImage{
     }
 
     /************** GETTERS *************************************************/
-
-
-    /************** SETTERS *************************************************/
-
-    Map<Point,Color>
-    @Override
-    public void setPixelColor(Color color, int x, int y) {
-
-    }
-
     @Override
     public Color getPixelColor(int x, int y) {
-        return null;
+        Point myPoint = new Point(x,y);
+        return dictionary.get(myPoint);
     }
-    /************** OTHER METHODS *************************************************/
 
+    /************** SETTERS *************************************************/
+    @Override
+    public void setPixelColor(Color color, int x, int y) {
+        Point myPoint = new Point(x,y);
+        dictionary.put(myPoint,color);
+    }
+
+    /************** OTHER METHODS *************************************************/
     @Override
     public void createRepresentation() {
-
+       this.dictionary = new HashMap<Point,Color>();
     }
 }

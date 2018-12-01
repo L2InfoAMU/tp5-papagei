@@ -1,13 +1,14 @@
 package viewer;
 
-import image.*;
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.image.PixelWriter;
 import javafx.scene.paint.Color;
-import raster.RasterImageType;
+import image.*;
+import raster.*;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -27,11 +28,15 @@ public class Display implements Initializable {
 
         // TODO : rajouter la création d'une fabrique d'image pour initialiser imageFactory
         /*imageFactory = new RasterUniformImageFactory(200,
-                200, Color.RED, RasterImageType.BRUTE);*/
+                200, Color.RED, RasterImageType.BRUTE);                             */ //TEST red_window BRUTE
         /*imageFactory = new RasterFlagFactory(900, 600,
-                Color.BLUE, Color.WHITE, Color.RED, RasterImageType.BRUTE); */
+                Color.BLUE, Color.WHITE, Color.RED, RasterImageType.BRUTE);         */ //Test Flag BRUTE
+        /*imageFactory = new RasterFlagFactory(900, 600,
+                Color.BLUE, Color.WHITE, Color.RED, RasterImageType.PALETTE);       */ //Test Flag Palette
+        //TODO : TEST IT IN Luminy. (test tache4)
         imageFactory = new RasterFlagFactory(900, 600,
-                Color.BLUE, Color.WHITE, Color.RED, RasterImageType.PALETTE);
+                Color.BLUE, Color.WHITE, Color.RED, RasterImageType.SPARSE);
+
         this.image = imageFactory.makeImage();
 
         render();

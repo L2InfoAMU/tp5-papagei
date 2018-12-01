@@ -9,6 +9,7 @@ import static util.Matrices.getColumnCount;
 public abstract class RasterImage implements Image {
     protected int width;
     protected int height;
+
     /******************** CONSTRUCTORS *******************************/
     public RasterImage(Color color, int width, int height){
         this.height = height;
@@ -50,7 +51,6 @@ public abstract class RasterImage implements Image {
         for(int column=0; column <this.width; column++){
             for(int row=0; row<this.width; row++){
                 setPixelColor(color,column,row);
-
             }//end column
         }//end row
     }
@@ -63,7 +63,7 @@ public abstract class RasterImage implements Image {
         for(int column=0; column < width ; column++){
             for (int row=0; row < height; row++){
                 Color new_color = pixels[column][row];
-                setPixelColor(new_color, column, row);// set the new byte in indexesOfColors[x][y]
+                setPixelColor(new_color, column, row);
             } // end for row
         }// enf for column
     }
@@ -74,7 +74,6 @@ public abstract class RasterImage implements Image {
 
 
     /************** OTHER METHODS *************************************************/
-
     public abstract void createRepresentation();
 
     protected void checkmatrice(Color[][] colors){
