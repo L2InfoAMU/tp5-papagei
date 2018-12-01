@@ -34,8 +34,9 @@ public class Display implements Initializable {
         //TODO : TEST IT IN Luminy. (test tache4)
         imageFactory = new RasterFlagFactory(900, 600,
                 Color.BLUE, Color.WHITE, Color.RED, RasterImageType.SPARSE);
-
-        this.image = imageFactory.makeImage();
+        //TODO : NEXT TEST (for tache5).
+        /*imageFactory = new LogoLISFactory();
+        this.image = imageFactory.makeImage();*/
 
         render();
     }
