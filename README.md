@@ -6,8 +6,8 @@ On va considérer quatre manières de représenter une image en couleur et donc 
 
 - `BruteRasterImage`
 - `PaletteRasterImage`
-- `SparseRasterImage` 
-- `VectorImage` 
+- `SparseRasterImage`
+- `VectorImage`
 
 ## Membres du projet
 

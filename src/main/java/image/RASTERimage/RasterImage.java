@@ -1,10 +1,8 @@
-package raster;
+package image.RASTERimage;
 
-import image.Image;
 import javafx.scene.paint.Color;
-
+import image.Image;
 import static util.Matrices.*;
-import static util.Matrices.getColumnCount;
 
 public abstract class RasterImage implements Image {
     protected int width;

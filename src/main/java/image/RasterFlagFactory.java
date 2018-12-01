@@ -1,10 +1,11 @@
 package image;
 
 
+import image.BRUTE.BruteRasterImage;
+import image.PALETTE.PaletteRasterImage;
+import image.RASTERimage.RasterImageType;
+import image.SPARSE.SparseRasterImage;
 import javafx.scene.paint.Color;
-import raster.*;
-import palette.*;
-import sparse.*;
 import exception.NotSupportedException;
 
 public class RasterFlagFactory implements ImageFactory {

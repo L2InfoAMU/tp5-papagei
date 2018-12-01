@@ -1,4 +1,4 @@
-package raster;
+package image.RASTERimage;
 
 public enum RasterImageType {
     BRUTE,

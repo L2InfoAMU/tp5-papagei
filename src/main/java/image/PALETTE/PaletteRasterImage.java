@@ -1,12 +1,9 @@
-package palette;// REMEMBER  x => columns AND y => ROWS
-import image.*;
-import raster.*;
-import javafx.scene.paint.Color;
+package image.PALETTE;  // REMEMBER  x => columns AND y => ROWS
 
+import javafx.scene.paint.Color;
 import java.util.ArrayList;
 import java.util.List;
-
-import static util.Matrices.*;
+import image.RASTERimage.RasterImage;
 
 public class PaletteRasterImage extends RasterImage {
     private List<Color> palette;

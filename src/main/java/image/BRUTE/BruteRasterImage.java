@@ -1,11 +1,9 @@
-package raster;
+package image.BRUTE;
 
-import image.*;
 import javafx.scene.paint.Color;
+import image.RASTERimage.RasterImage;
 
-import static util.Matrices.*;
-
-public class BruteRasterImage extends RasterImage  {
+public class BruteRasterImage extends RasterImage {
     private Color[][] pixels;
     /******************** CONSTRUCTORS *******************************/
     public BruteRasterImage(Color color, int width, int height){

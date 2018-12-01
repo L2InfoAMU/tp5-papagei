@@ -1,7 +1,8 @@
 package image;
 
-import raster.*; // to use the raster files
-import palette.*;
+import image.BRUTE.BruteRasterImage;
+import image.PALETTE.PaletteRasterImage;
+import image.RASTERimage.RasterImageType;
 import exception.NotSupportedException; // manage exception
 import javafx.scene.paint.Color;
 

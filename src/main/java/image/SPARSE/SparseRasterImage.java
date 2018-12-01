@@ -1,10 +1,9 @@
-package sparse;
+package image.SPARSE;
 
-import image.Point;
 import javafx.scene.paint.Color;
-import raster.RasterImage;
-
 import java.util.HashMap;
+import image.Point;
+import image.RASTERimage.RasterImage;
 
 public class SparseRasterImage extends RasterImage{
     private HashMap<Point,Color> dictionary ;
