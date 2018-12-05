@@ -1,21 +1,18 @@
 package image.VECTOR;
 
-import image.Point;
 import javafx.scene.paint.Color;
 import java.util.List;
-import image.Image;
 import image.Shape;
+import image.ManageImage;
+import image.Point;
 
-public class VectorImage implements Image {
+public class VectorImage extends ManageImage {
     private List<Shape> shapes;
-    private int width;
-    private int height;
 
     /******************** CONSTRUCTORS *******************************/
     public VectorImage(List<Shape> shapes, int width, int height){
+        setDimensions(width,height);
         this.shapes = shapes;
-        this.width = width;
-        this.height = height;
     }
 
     /************** GETTERS *************************************************/
@@ -27,15 +24,6 @@ public class VectorImage implements Image {
                 return myShape.getColor();
             }
         }
-        return Color.WHITE; //if point not in a shape ==> his color is white.
+        return Color.WHITE; //if point not in a shape ==> his color is white by default.
     }
-    @Override
-    public int getWidth() { return this.width; }
-    @Override
-    public int getHeight() { return this.height; }
-
-    /************** SETTERS *************************************************/
-    protected void setWidth(int width){this.width = width;}
-    protected void setHeight(int height){this.height = height;}
-
 }

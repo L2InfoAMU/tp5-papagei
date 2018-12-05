@@ -19,12 +19,8 @@ public class BruteRasterImage extends RasterImage {
 
     /************** SETTERS *************************************************/
 
-    public void setPixelColor(Color color, int x, int y){
-        this.pixels[x][y]= color;
-    }
+    public void setPixelColor(Color color, int x, int y){ pixels[x][y]= color; }
 
     /************** OTHER METHODS *************************************************/
-    public void createRepresentation(){
-        this.pixels = new Color[this.width][this.height];
-    }
+    public void createRepresentation(){ pixels = new Color[width][height]; }
 }

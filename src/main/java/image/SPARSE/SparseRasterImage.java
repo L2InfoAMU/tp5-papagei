@@ -33,7 +33,6 @@ public class SparseRasterImage extends RasterImage{
 
     /************** OTHER METHODS *************************************************/
     @Override
-    public void createRepresentation() {
-       this.dictionary = new HashMap<Point,Color>();
+    public void createRepresentation() { dictionary = new HashMap<Point,Color>();
     }
 }
