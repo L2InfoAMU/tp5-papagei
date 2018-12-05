@@ -21,7 +21,7 @@ public class SparseRasterImage extends RasterImage{
     @Override
     public Color getPixelColor(int x, int y) {
         Point myPoint = new Point(x,y);
-        return dictionary.get(myPoint);
+        return dictionary.getOrDefault(myPoint,Color.WHITE);
     }
 
     /************** SETTERS *************************************************/

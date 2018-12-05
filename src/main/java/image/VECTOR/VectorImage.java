@@ -27,7 +27,7 @@ public class VectorImage implements Image {
                 return myShape.getColor();
             }
         }
-        return null; //we assume here that the point is in one of the shapes.
+        return Color.WHITE; //if point not in a shape ==> his color is white.
     }
     @Override
     public int getWidth() { return this.width; }

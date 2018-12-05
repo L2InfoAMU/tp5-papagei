@@ -31,12 +31,12 @@ public class Display implements Initializable {
                 Color.BLUE, Color.WHITE, Color.RED, RasterImageType.BRUTE);         */ //Test Flag BRUTE
         /*imageFactory = new RasterFlagFactory(900, 600,
                 Color.BLUE, Color.WHITE, Color.RED, RasterImageType.PALETTE);       */ //Test Flag Palette
-        //TODO : TEST IT IN Luminy. (test tache4)
-        imageFactory = new RasterFlagFactory(900, 600,
-                Color.BLUE, Color.WHITE, Color.RED, RasterImageType.SPARSE);
+
+        /*imageFactory = new RasterFlagFactory(900, 600,
+                Color.BLUE, Color.WHITE, Color.RED, RasterImageType.SPARSE);*/ // TESTED ADN WORKS
         //TODO : NEXT TEST (for tache5).
-        /*imageFactory = new LogoLISFactory();
-        this.image = imageFactory.makeImage();*/
+        imageFactory = new LogoLISFactory();
+        this.image = imageFactory.makeImage();
 
         render();
     }
