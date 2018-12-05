@@ -24,8 +24,8 @@ public class Rectangle implements Shape {
     /************** OTHER METHODS *************************************************/
     @Override
     public boolean contains(Point point) { //TODO demander si c'est plus opti.
-        if (point.x > this.x && point.x < this.x + width){ // check first for X value
-            if (point.y > this.y && point.y < this.y + height){// if X is OK then check for Y
+        if (point.x > this.x && point.x <= this.x + width){ // check first for X value
+            if (point.y > this.y && point.y <= this.y + height){// if X is OK then check for Y
                 return true;
             }
         }
