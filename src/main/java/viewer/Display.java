@@ -23,21 +23,22 @@ public class Display implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //TEST red_window BRUTE:
+        /*imageFactory = new RasterUniformImageFactory(200,200, Color.RED, RasterImageType.BRUTE);*/
 
-        // TODO : rajouter la création d'une fabrique d'image pour initialiser imageFactory
-        /*imageFactory = new RasterUniformImageFactory(200,
-                200, Color.RED, RasterImageType.BRUTE);                             */ //TEST red_window BRUTE
-        /*imageFactory = new RasterFlagFactory(900, 600,
-                Color.BLUE, Color.WHITE, Color.RED, RasterImageType.BRUTE);         */ //Test Flag BRUTE
-        /*imageFactory = new RasterFlagFactory(900, 600,
-                Color.BLUE, Color.WHITE, Color.RED, RasterImageType.PALETTE);       */ //Test Flag Palette
+        //Test FLAG BRUTE:
+        /*imageFactory = new RasterFlagFactory(900, 600,Color.BLUE, Color.WHITE, Color.RED, RasterImageType.BRUTE);*/
 
-        /*imageFactory = new RasterFlagFactory(900, 600,
-                Color.BLUE, Color.WHITE, Color.RED, RasterImageType.SPARSE);*/ // TESTED ADN WORKS
-        //TODO : NEXT TEST (for tache5).
+        //Test FLAG Palette:
+        /*imageFactory = new RasterFlagFactory(900, 600,Color.BLUE, Color.WHITE, Color.RED, RasterImageType.PALETTE)*/
+
+        //Test FLAG Sparse
+        /*imageFactory = new RasterFlagFactory(900, 600,Color.BLUE, Color.WHITE, Color.RED, RasterImageType.SPARSE);*/
+
+        //Test LOGO LIS FACTORY. (VectorImage):
         imageFactory = new LogoLISFactory();
-        this.image = imageFactory.makeImage();
 
+        this.image = imageFactory.makeImage();
         render();
     }
 
